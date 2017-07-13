@@ -31,12 +31,12 @@ public void upload(HttpServletRequest request, HttpServletResponse response) thr
                     //解决普通输入项的数据的中文乱码问题
                     String value = item.getString("UTF-8");
                     String value1;
-					try {
-						value1 = new String(name.getBytes("iso8859-1"),"UTF-8");
-					} catch (Exception e) {
-						// TODO 自动生成的 catch 块
-						e.printStackTrace();
-					}
+		    try {
+			value1 = new String(name.getBytes("iso8859-1"),"UTF-8");
+		    } catch (Exception e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+		    }
                     System.out.println(name+"  "+value);
                 }else{
                     //如果fileitem中封装的是上传文件，得到上传的文件名称，
